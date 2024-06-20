@@ -1,49 +1,65 @@
+<%-- 
+    Document   : DashBoard
+    Created on : Jun 18, 2024, 12:43:15 AM
+    Author     : USER
+--%>
+
+<%@page contentType="text/html" pageEncoding="UTF-8"%>
 <!DOCTYPE html>
 <html>
-<head>
-    <meta charset="UTF-8">
-    <title>Director | Dashboard</title>
-    <meta content='width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no' name='viewport'>
-    <meta name="description" content="Developed By M Abdur Rokib Promy">
-    <meta name="keywords" content="Admin, Bootstrap 3, Template, Theme, Responsive">
-    <!-- bootstrap 3.0.2 -->
-    <link href="${pageContext.request.contextPath}/css/bootstrap.min.css" rel="stylesheet" type="text/css" />
-    <!-- font Awesome -->
-    <link href="${pageContext.request.contextPath}/css/font-awesome.min.css" rel="stylesheet" type="text/css" />
-    <!-- Ionicons -->
-    <link href="${pageContext.request.contextPath}/css/ionicons.min.css" rel="stylesheet" type="text/css" />
-    <!-- Morris chart -->
-    <link href="${pageContext.request.contextPath}/css/morris/morris.css" rel="stylesheet" type="text/css" />
-    <!-- jvectormap -->
-    <link href="${pageContext.request.contextPath}/css/jvectormap/jquery-jvectormap-1.2.2.css" rel="stylesheet" type="text/css" />
-    <!-- Date Picker -->
-    <link href="${pageContext.request.contextPath}/css/datepicker/datepicker3.css" rel="stylesheet" type="text/css" />
-    <!-- fullCalendar -->
-    <!-- <link href="css/fullcalendar/fullcalendar.css" rel="stylesheet" type="text/css" /> -->
-    <!-- Daterange picker -->
-    <link href="css/daterangepicker/daterangepicker-bs3.css" rel="stylesheet" type="text/css" />
-    <!-- iCheck for checkboxes and radio inputs -->
-    <link href="css/iCheck/all.css" rel="stylesheet" type="text/css" />
-    <!-- bootstrap wysihtml5 - text editor -->
-    <!-- <link href="css/bootstrap-wysihtml5/bootstrap3-wysihtml5.min.css" rel="stylesheet" type="text/css" /> -->
-    <link href='http://fonts.googleapis.com/css?family=Lato' rel='stylesheet' type='text/css'>
-    <!-- Theme style -->
-    <link href="${pageContext.request.contextPath}/css/style.css" rel="stylesheet" type="text/css" />
+    <head>
+        <meta charset="UTF-8">
+        <title>Director | Dashboard</title>
+        <meta content='width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no' name='viewport'>
+        <meta name="description" content="Developed By M Abdur Rokib Promy">
+        <meta name="keywords" content="Admin, Bootstrap 3, Template, Theme, Responsive">
+        <!-- bootstrap 3.0.2 -->
+        <link href="${pageContext.request.contextPath}/css/bootstrap.min.css" rel="stylesheet" type="text/css" />
+        <!-- font Awesome -->
+        <link href="${pageContext.request.contextPath}/css/font-awesome.min.css" rel="stylesheet" type="text/css" />
+        <!-- Ionicons -->
+        <link href="${pageContext.request.contextPath}/css/ionicons.min.css" rel="stylesheet" type="text/css" />
+        <!-- Morris chart -->
+        <link href="${pageContext.request.contextPath}/css/morris/morris.css" rel="stylesheet" type="text/css" />
+        <!-- jvectormap -->
+        <link href="${pageContext.request.contextPath}/css/jvectormap/jquery-jvectormap-1.2.2.css" rel="stylesheet" type="text/css" />
+        <!-- Date Picker -->
+        <link href="${pageContext.request.contextPath}/css/datepicker/datepicker3.css" rel="stylesheet" type="text/css" />
+        <!-- fullCalendar -->
+        <!-- <link href="css/fullcalendar/fullcalendar.css" rel="stylesheet" type="text/css" /> -->
+        <!-- Daterange picker -->
+        <link href="${pageContext.request.contextPath}/css/daterangepicker/daterangepicker-bs3.css" rel="stylesheet" type="text/css" />
+        <!-- iCheck for checkboxes and radio inputs -->
+        <link href="${pageContext.request.contextPath}/css/iCheck/all.css" rel="stylesheet" type="text/css" />
+        <!-- bootstrap wysihtml5 - text editor -->
+        <!-- <link href="css/bootstrap-wysihtml5/bootstrap3-wysihtml5.min.css" rel="stylesheet" type="text/css" /> -->
+        <link href='http://fonts.googleapis.com/css?family=Lato' rel='stylesheet' type='text/css'>
+        <!-- Theme style -->
+        <link href="${pageContext.request.contextPath}/css/style.css" rel="stylesheet" type="text/css" />
+        <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+        <style>
+            /*        body {
+                        font-family: Arial, sans-serif;
+                    }*/
+            .chart-container {
+                width: 80%;
+                margin: auto;
+            }
+        </style>
 
 
-
-    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
-    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+        <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+        <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
         <!--[if lt IE 9]>
           <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
           <script src="https://oss.maxcdn.com/libs/respond.js/1.3.0/respond.min.js"></script>
           <![endif]-->
 
-          <style type="text/css">
+        <style type="text/css">
 
-          </style>
-      </head>
-      <body class="skin-black">
+        </style>
+    </head>
+    <body class="skin-black">
         <!-- header logo: style can be found in header.less -->
         <header class="header">
             <a href="index.html" class="logo">
@@ -220,98 +236,185 @@
 
                                 <li>
                                     <a href="#">
-                                    <i class="fa fa-clock-o fa-fw pull-right"></i>
+                                        <i class="fa fa-clock-o fa-fw pull-right"></i>
                                         <span class="badge badge-success pull-right">10</span> Updates</a>
                                     <a href="#">
-                                    <i class="fa fa-envelope-o fa-fw pull-right"></i>
+                                        <i class="fa fa-envelope-o fa-fw pull-right"></i>
                                         <span class="badge badge-danger pull-right">5</span> Messages</a>
                                     <a href="#"><i class="fa fa-magnet fa-fw pull-right"></i>
                                         <span class="badge badge-info pull-right">3</span> Subscriptions</a>
                                     <a href="#"><i class="fa fa-question fa-fw pull-right"></i> <span class=
-                                        "badge pull-right">11</span> FAQ</a>
+                                                                                                      "badge pull-right">11</span> FAQ</a>
                                 </li>
 
                                 <li class="divider"></li>
 
-                                    <li>
-                                        <a href="#">
+                                <li>
+                                    <a href="#">
                                         <i class="fa fa-user fa-fw pull-right"></i>
-                                            Profile
-                                        </a>
-                                        <a data-toggle="modal" href="#modal-user-settings">
+                                        Profile
+                                    </a>
+                                    <a data-toggle="modal" href="#modal-user-settings">
                                         <i class="fa fa-cog fa-fw pull-right"></i>
-                                            Settings
-                                        </a>
-                                        </li>
+                                        Settings
+                                    </a>
+                                </li>
 
-                                        <li class="divider"></li>
+                                <li class="divider"></li>
 
-                                        <li>
-                                            <a href="#"><i class="fa fa-ban fa-fw pull-right"></i> Logout</a>
-                                        </li>
-                                    </ul>
+                                <li>
+                                    <a href="#"><i class="fa fa-ban fa-fw pull-right"></i> Logout</a>
                                 </li>
                             </ul>
+                        </li>
+                    </ul>
+                </div>
+            </nav>
+        </header>
+        <div class="wrapper row-offcanvas row-offcanvas-left">
+            <!-- Left side column. contains the logo and sidebar -->
+            <aside class="left-side sidebar-offcanvas">
+                <!-- sidebar: style can be found in sidebar.less -->
+                <section class="sidebar">
+                    <!-- Sidebar user panel -->
+                    <div class="user-panel">
+                        <div class="pull-left image">
+                            <img src="img/26115.jpg" class="img-circle" alt="User Image" />
                         </div>
-                    </nav>
-                </header>
-                <div class="wrapper row-offcanvas row-offcanvas-left">
-                    <!-- Left side column. contains the logo and sidebar -->
-                    <aside class="left-side sidebar-offcanvas">
-                        <!-- sidebar: style can be found in sidebar.less -->
-                        <section class="sidebar">
-                            <!-- Sidebar user panel -->
-                            <div class="user-panel">
-                                <div class="pull-left image">
-                                    <img src="img/26115.jpg" class="img-circle" alt="User Image" />
-                                </div>
-                                <div class="pull-left info">
-                                    <p>Hello, Jane</p>
+                        <div class="pull-left info">
+                            <p>Hello, Jane</p>
 
-                                    <a href="#"><i class="fa fa-circle text-success"></i> Online</a>
-                                </div>
-                            </div>
-                            <!-- search form -->
-                            <form action="#" method="get" class="sidebar-form">
-                                <div class="input-group">
-                                    <input type="text" name="q" class="form-control" placeholder="Search..."/>
-                                    <span class="input-group-btn">
-                                        <button type='submit' name='seach' id='search-btn' class="btn btn-flat"><i class="fa fa-search"></i></button>
-                                    </span>
-                                </div>
-                            </form>
-                            <!-- /.search form -->
-                            <!-- sidebar menu: : style can be found in sidebar.less -->
-                            <ul class="sidebar-menu">
-                                <li class="active">
-                                    <a href="index.html">
-                                        <i class="fa fa-dashboard"></i> <span>Dashboard</span>
-                                    </a>
-                                </li>
-                                <li>
-                                    <a href="general.html">
-                                        <i class="fa fa-gavel"></i> <span>General</span>
-                                    </a>
-                                </li>
+                            <a href="#"><i class="fa fa-circle text-success"></i> Online</a>
+                        </div>
+                    </div>
+                    <!-- search form -->
+                    <form action="#" method="get" class="sidebar-form">
+                        <div class="input-group">
+                            <input type="text" name="q" class="form-control" placeholder="Search..."/>
+                            <span class="input-group-btn">
+                                <button type='submit' name='seach' id='search-btn' class="btn btn-flat"><i class="fa fa-search"></i></button>
+                            </span>
+                        </div>
+                    </form>
+                    <!-- /.search form -->
+                    <!-- sidebar menu: : style can be found in sidebar.less -->
+                     <ul class="sidebar-menu">
+                    <li>
+                        <a href="Home.jsp">
+                            <i class="fa fa-dashboard"></i> <span>Home</span>
+                        </a>
+                    </li>
+                    <li class="active">
+                        <a href="DashBoard.jsp">
+                            <i class="fa fa-dashboard"></i> <span>Dash board</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="Resgiter.jsp">
+                            <i class="fa fa-dashboard"></i> <span>Resgiter</span>
+                        </a>
+                    </li>
+                     <li>
+                        <a href="Login.jsp">
+                            <i class="fa fa-dashboard"></i> <span>Login</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="ChanePass.jsp">
+                            <i class="fa fa-dashboard"></i> <span>Change Pass Word</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="ViewProfile.jsp">
+                            <i class="fa fa-dashboard"></i> <span>View Profile</span>
+                        </a>
+                    </li>
+                     <li class="active">
+                        <a href="AccountDetails.jsp">
+                            <i class="fa fa-dashboard"></i> <span>Account Details</span>
+                        </a>
+                    </li>
+                     <li>
+                        <a href="ProductList.jsp">
+                            <i class="fa fa-dashboard"></i> <span>Product List</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="ProductDetatails.jsp">
+                            <i class="fa fa-dashboard"></i><span>Product Details</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="ProductSelect.jsp">
+                            <i class="fa fa-dashboard"></i><span>Product Select</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="ShoppingCart.jsp">
+                            <i class="fa fa-dashboard"></i> <span>Shopping Cart</span>
+                        </a>
+                    </li>
+                     <li>
+                        <a href="MyProductList.jsp">
+                            <i class="fa fa-dashboard"></i> <span>My Product List</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="MyProductDetails.jsp">
+                            <i class="fa fa-gavel"></i> <span>My product details</span>
+                        </a>
+                    </li>
 
-                                <li>
-                                    <a href="basic_form.html">
-                                        <i class="fa fa-globe"></i> <span>Basic Elements</span>
-                                    </a>
-                                </li>
+                    <li >
+                        <a href="MakeOderRequest.jsp">
+                            <i class="fa fa-globe"></i> <span>Make order request</span>
+                        </a>
+                    </li>
 
-                                <li>
-                                    <a href="simple.html">
-                                        <i class="fa fa-glass"></i> <span>Simple tables</span>
-                                    </a>
-                                </li>
+                    <li>
+                        <a href="MyRequestOrderList.jsp">
+                            <i class="fa fa-glass"></i> <span>My Request Order List</span>
+                        </a>
+                    </li>
+                     <li>
+                        <a href="MyRequestOrderDetail.jsp">
+                            <i class="fa fa-glass"></i> <span>My Request Order Detail</span>
+                        </a>
+                    </li>
+                     <li>
+                        <a href="pay.jsp">
+                            <i class="fa fa-glass"></i> <span>PAYMENT</span>
+                        </a>
+                    </li>
+                     <li >
+                        <a href="AccounManager.jsp">
+                            <i class="fa fa-glass"></i> <span>Account Manager</span>
+                        </a>
+                    </li>
+                     <li>
+                        <a href="AddAccount.jsp">
+                            <i class="fa fa-glass"></i> <span>Add Account</span>
+                        </a>
+                    </li>
+                     <li>
+                        <a href="oderlist.jsp">
+                            <i class="fa fa-glass"></i> <span>Order list </span>
+                        </a>
+                    </li>
+                     <li>
+                        <a href="oderdetails.jsp">
+                            <i class="fa fa-glass"></i> <span>Order Details </span>
+                        </a>
+                    </li>
+                    
+                   
 
-                            </ul>
-                        </section>
-                        <!-- /.sidebar -->
-                    </aside>
+                </ul>
+                </section>
+                <!-- /.sidebar -->
+            </aside>
 
-                    <aside class="right-side">
+            <aside class="right-side">
 
                 <!-- Main content -->
                 <section class="content">
@@ -362,254 +465,227 @@
 
                         <div class="col-md-8">
                             <!--earning graph start-->
+
+
+
+
                             <section class="panel">
                                 <header class="panel-heading">
                                     Earning Graph
                                 </header>
-                                <div class="panel-body">
-                                    <canvas id="linechart" width="600" height="330"></canvas>
+                                <div class="chart-container">
+                                    <canvas id="orderChart"></canvas>
                                 </div>
-                                        </section>
-                                        <!--earning graph end-->
+                            </section>
+                        </div>
+                        <div class="col-lg-4">
 
-                                    </div>
-                                    <div class="col-lg-4">
-
-                                        <!--chat start-->
-                                        <section class="panel">
-                                            <header class="panel-heading">
-                                                Notifications
-                                            </header>
-                                                <div class="panel-body" id="noti-box">
-
-                                                    <div class="alert alert-block alert-danger">
-                                                        <button data-dismiss="alert" class="close close-sm" type="button">
-                                                            <i class="fa fa-times"></i>
-                                                        </button>
-                                                        <strong>Oh snap!</strong> Change a few things up and try submitting again.
-                                                    </div>
-                                                    <div class="alert alert-success">
-                                                        <button data-dismiss="alert" class="close close-sm" type="button">
-                                                            <i class="fa fa-times"></i>
-                                                        </button>
-                                                        <strong>Well done!</strong> You successfully read this important alert message.
-                                                    </div>
-                                                    <div class="alert alert-info">
-                                                        <button data-dismiss="alert" class="close close-sm" type="button">
-                                                            <i class="fa fa-times"></i>
-                                                        </button>
-                                                        <strong>Heads up!</strong> This alert needs your attention, but it's not super important.
-                                                    </div>
-                                                    <div class="alert alert-warning">
-                                                        <button data-dismiss="alert" class="close close-sm" type="button">
-                                                            <i class="fa fa-times"></i>
-                                                        </button>
-                                                        <strong>Warning!</strong> Best check yo self, you're not looking too good.
-                                                    </div>
+                            <!--chat start-->
+                            <section class="panel">
+                                <header class="panel-heading">
+                                    Notifications
+                                </header>
+                                <div class="chart-container">
+                                    <canvas id="orderPieChart"></canvas>
+                                </div>
+                            </section>
+                        </div>
+                    </div>                     
 
 
-                                                    <div class="alert alert-block alert-danger">
-                                                        <button data-dismiss="alert" class="close close-sm" type="button">
-                                                            <i class="fa fa-times"></i>
-                                                        </button>
-                                                        <strong>Oh snap!</strong> Change a few things up and try submitting again.
-                                                    </div>
-                                                    <div class="alert alert-success">
-                                                        <button data-dismiss="alert" class="close close-sm" type="button">
-                                                            <i class="fa fa-times"></i>
-                                                        </button>
-                                                        <strong>Well done!</strong> You successfully read this important alert message.
-                                                    </div>
-                                                    <div class="alert alert-info">
-                                                        <button data-dismiss="alert" class="close close-sm" type="button">
-                                                            <i class="fa fa-times"></i>
-                                                        </button>
-                                                        <strong>Heads up!</strong> This alert needs your attention, but it's not super important.
-                                                    </div>
-                                                    <div class="alert alert-warning">
-                                                        <button data-dismiss="alert" class="close close-sm" type="button">
-                                                            <i class="fa fa-times"></i>
-                                                        </button>
-                                                        <strong>Warning!</strong> Best check yo self, you're not looking too good.
-                                                    </div>
+                    <script>
+                        // Line Chart
+                        const ctx = document.getElementById('orderChart').getContext('2d');
+                        const orderChart = new Chart(ctx, {
+                            type: 'line',
+                            data: {
+                                labels: ['Day 1', 'Day 2', 'Day 3', 'Day 4', 'Day 5', 'Day 6', 'Day 7'],
+                                datasets: [
+                                    {
+                                        label: 'Success Orders',
+                                        data: [10, 20, 30, 40, 50, 60, 70],
+                                        borderColor: 'blue',
+                                        backgroundColor: 'rgba(0, 0, 255, 0.1)',
+                                        fill: false,
+                                        tension: 0.1
+                                    },
+                                    {
+                                        label: 'All Orders',
+                                        data: [15, 25, 35, 45, 55, 65, 75],
+                                        borderColor: 'green',
+                                        backgroundColor: 'rgba(0, 255, 0, 0.1)',
+                                        fill: false,
+                                        tension: 0.1
+                                    }
+                                ]
+                            },
+                            options: {
+                                responsive: true,
+                                plugins: {
+                                    legend: {
+                                        display: true,
+                                        position: 'top'
+                                    }
+                                },
+                                scales: {
+                                    x: {
+                                        title: {
+                                            display: true,
+                                            text: 'Days'
+                                        }
+                                    },
+                                    y: {
+                                        title: {
+                                            display: true,
+                                            text: 'Order Counts'
+                                        }
+                                    }
+                                }
+                            }
+                        });
 
+                        // Pie Chart
+                        const ctxPie = document.getElementById('orderPieChart').getContext('2d');
+                        const orderPieChart = new Chart(ctxPie, {
+                            type: 'pie',
+                            data: {
+                                labels: ['Success Orders', 'All Orders'],
+                                datasets: [{
+                                        data: [280, 315], // Sum of success orders and all orders over 7 days
+                                        backgroundColor: ['blue', 'green'],
+                                    }]
+                            },
+                            options: {
+                                responsive: true,
+                                plugins: {
+                                    legend: {
+                                        display: true,
+                                        position: 'top'
+                                    }
+                                }
+                            }
+                        });
+                    </script>
 
-
-                                                </div>
-                                        </section>
-
-
-
-                      </div>
-
-
-                  </div>
                     <div class="row">
 
-                        <div class="col-md-8">
+                        <div class="col-md-4">
                             <section class="panel">
-                              <header class="panel-heading">
-                                  Work Progress
-                            </header>
-                            <div class="panel-body table-responsive">
-                                <table class="table table-hover">
-                                  <thead>
-                                    <tr>
-                                      <th>#</th>
-                                      <th>Project</th>
-                                      <th>Manager</th>
-                                      <!-- <th>Client</th> -->
-                                      <th>Deadline</th>
-                                      <!-- <th>Price</th> -->
-                                      <th>Status</th>
-                                      <th>Progress</th>
-                                  </tr>
-                              </thead>
-                              <tbody>
-                                <tr>
-                                  <td>1</td>
-                                  <td>Facebook</td>
-                                  <td>Mark</td>
-                                  <!-- <td>Steve</td> -->
-                                  <td>10/10/2014</td>
-                                  <!-- <td>$1500</td> -->
-                                  <td><span class="label label-danger">in progress</span></td>
-                                  <td><span class="badge badge-info">50%</span></td>
-                              </tr>
-                              <tr>
-                                  <td>2</td>
-                                  <td>Twitter</td>
-                                  <td>Evan</td>
-                                  <!-- <td>Darren</td> -->
-                                  <td>10/8/2014</td>
-                                  <!-- <td>$1500</td> -->
-                                  <td><span class="label label-success">completed</span></td>
-                                  <td><span class="badge badge-success">100%</span></td>
-                              </tr>
-                              <tr>
-                                  <td>3</td>
-                                  <td>Google</td>
-                                  <td>Larry</td>
-                                  <!-- <td>Nick</td> -->
-                                  <td>10/12/2014</td>
-                                  <!-- <td>$2000</td> -->
-                                  <td><span class="label label-warning">in progress</span></td>
-                                  <td><span class="badge badge-warning">75%</span></td>
-                              </tr>
-                              <tr>
-                                  <td>4</td>
-                                  <td>LinkedIn</td>
-                                  <td>Allen</td>
-                                  <!-- <td>Rock</td> -->
-                                  <td>10/01/2015</td>
-                                  <!-- <td>$2000</td> -->
-                                  <td><span class="label label-info">in progress</span></td>
-                                  <td><span class="badge badge-info">65%</span></td>
-                              </tr>
-                              <tr>
-                                  <td>5</td>
-                                  <td>Tumblr</td>
-                                  <td>David</td>
-                                  <!-- <td>HHH</td> -->
-                                  <td>01/11/2014</td>
-                                  <!-- <td>$2000</td> -->
-                                  <td><span class="label label-warning">in progress</span></td>
-                                  <td><span class="badge badge-danger">95%</span></td>
-                              </tr>
-                              <tr>
-                                  <td>6</td>
-                                  <td>Tesla</td>
-                                  <td>Musk</td>
-                                  <!-- <td>HHH</td> -->
-                                  <td>01/11/2014</td>
-                                  <!-- <td>$2000</td> -->
-                                  <td><span class="label label-info">in progress</span></td>
-                                  <td><span class="badge badge-success">95%</span></td>
-                              </tr>
-                              <tr>
-                                  <td>7</td>
-                                  <td>Ghost</td>
-                                  <td>XXX</td>
-                                  <!-- <td>HHH</td> -->
-                                  <td>01/11/2014</td>
-                                  <!-- <td>$2000</td> -->
-                                  <td><span class="label label-info">in progress</span></td>
-                                  <td><span class="badge badge-success">95%</span></td>
-                              </tr>
-                          </tbody>
-                      </table>
-                  </div>
-              </section>
+                                <header class="panel-heading">
+                                    Work Progress
+                                </header>
+                                <div class="chart">
+                                    <canvas id="revenueChart"></canvas>
+                                </div>
+
+                            </section>
 
 
-          </div><!--end col-6 -->
-          <div class="col-md-4">
-            <section class="panel">
-                <header class="panel-heading">
-                    Twitter Feed
-                </header>
-                <div class="panel-body">
-                    <div class="twt-area">
-                        <form action="#" method="post">
-                            <textarea class="form-control" name="profile-tweet" placeholder="Share something on Twitter.." rows="3"></textarea>
+                        </div><!--end col-6 -->
+                        <div class="col-md-4">
+                            <section class="panel">
+                                <header class="panel-heading">
+                                    Twitter Feed
+                                </header>
+                                <div class="chart">
+                                    <canvas id="productRevenueChart"></canvas>
+                                </div>
+                            </section>
+                        </div>
+                        <div class="col-md-4">
+                            <section class="panel">
+                                <header class="panel-heading">
+                                    Twitter Feed
+                                </header>
+                                <div class="chart">
+                                    <canvas id="customersChart"></canvas>
+                                </div>
+                            </section>
+                        </div>
+                        <script>
+                            // Chart 1: Revenues
+                            const ctx1 = document.getElementById('revenueChart').getContext('2d');
+                            const revenueChart = new Chart(ctx1, {
+                                type: 'bar',
+                                data: {
+                                    labels: ['Category 1', 'Category 2', 'Category 3'],
+                                    datasets: [
+                                        {
+                                            label: 'Paid',
+                                            data: [1000, 1500, 3000],
+                                            backgroundColor: 'blue'
+                                        },
+                                        {
+                                            label: 'Unpaid',
+                                            data: [500, 500, 2500],
+                                            backgroundColor: 'green'
+                                        }
+                                    ]
+                                },
+                                options: {
+                                    responsive: true,
+                                    scales: {
+                                        y: {
+                                            beginAtZero: true
+                                        }
+                                    }
+                                }
+                            });
 
-                            <div class="clearfix">
-                                <button class="btn btn-sm btn-primary pull-right" type="submit">
-                                    <i class="fa fa-twitter"></i>
-                                    Tweet
-                                </button>
-                                <a class="btn btn-link btn-icon fa fa-location-arrow" data-original-title="Add Location" data-placement="bottom" data-toggle="tooltip" href=
-                                "#" style="text-decoration:none;" title=""></a>
-                                <a class="btn btn-link btn-icon fa fa-camera" data-original-title="Add Photo" data-placement="bottom" data-toggle="tooltip" href="#"
-                                style="text-decoration:none;" title=""></a>
-                            </div>
-                        </form>
-                    </div>
-                    <ul class="media-list">
-                        <li class="media">
-                            <a href="#" class="pull-left">
-                                <img src="img/26115.jpg" alt="Avatar" class="img-circle" width="64" height="64">
-                            </a>
-                            <div class="media-body">
-                                <span class="text-muted pull-right">
-                                    <small><em>30 min ago</em></small>
-                                </span>
-                                <a href="page_ready_user_profile.php">
-                                    <strong>John Doe</strong>
-                                </a>
-                                <p>
-                                    In hac <a href="#">habitasse</a> platea dictumst. Proin ac nibh rutrum lectus rhoncus eleifend.
-                                    <a href="#" class="text-danger">
-                                        <strong>#dev</strong>
-                                    </a>
-                                </p>
-                            </div>
-                        </li>
-                        <li class="media">
-                            <a href="#" class="pull-left">
-                                <img src="img/26115.jpg" alt="Avatar" class="img-circle" width="64" height="64">
-                            </a>
-                            <div class="media-body">
-                                <span class="text-muted pull-right">
-                                    <small><em>30 min ago</em></small>
-                                </span>
-                                <a href="page_ready_user_profile.php">
-                                    <strong>John Doe</strong>
-                                </a>
-                                <p>
-                                    In hac <a href="#">habitasse</a> platea dictumst. Proin ac nibh rutrum lectus rhoncus eleifend.
-                                    <a href="#" class="text-danger">
-                                        <strong>#design</strong>
-                                    </a>
-                                </p>
-                            </div>
-                        </li>
-                    </ul>
-                </div>
-            </section>
-        </div>
+                            // Chart 2: Revenues by Product Categories
+                            const ctx2 = document.getElementById('productRevenueChart').getContext('2d');
+                            const productRevenueChart = new Chart(ctx2, {
+                                type: 'bar',
+                                data: {
+                                    labels: ['Category 1', 'Category 2', 'Category 3', 'Category 4'],
+                                    datasets: [
+                                        {
+                                            label: 'Revenues',
+                                            data: [4000, 3000, 2000, 1000],
+                                            backgroundColor: 'blue'
+                                        }
+                                    ]
+                                },
+                                options: {
+                                    responsive: true,
+                                    scales: {
+                                        y: {
+                                            beginAtZero: true
+                                        }
+                                    }
+                                }
+                            });
 
-                    </div>
+                            // Chart 3: Customers
+                            const ctx3 = document.getElementById('customersChart').getContext('2d');
+                            const customersChart = new Chart(ctx3, {
+                                type: 'bar',
+                                data: {
+                                    labels: ['Day 1', 'Day 2', 'Day 3', 'Day 4', 'Day 5'],
+                                    datasets: [
+                                        {
+                                            label: 'Newly Registered',
+                                            data: [10, 20, 30, 40, 50],
+                                            backgroundColor: 'blue'
+                                        },
+                                        {
+                                            label: 'Newly Bought',
+                                            data: [5, 10, 15, 70, 60],
+                                            backgroundColor: 'green'
+                                        }
+                                    ]
+                                },
+                                options: {
+                                    responsive: true,
+                                    scales: {
+                                        y: {
+                                            beginAtZero: true
+                                        }
+                                    }
+                                }
+                            });
+                        </script>
+                   
                     <div class="row">
                         <div class="col-md-5">
                             <div class="panel">
@@ -654,134 +730,134 @@
                             </div>
                         </div>
                         <div class="col-md-7">
-                          <section class="panel tasks-widget">
-                              <header class="panel-heading">
-                                  Todo list
-                            </header>
-                            <div class="panel-body">
+                            <section class="panel tasks-widget">
+                                <header class="panel-heading">
+                                    Todo list
+                                </header>
+                                <div class="panel-body">
 
-                              <div class="task-content">
+                                    <div class="task-content">
 
-                                  <ul class="task-list">
-                                      <li>
-                                          <div class="task-checkbox">
-                                              <!-- <input type="checkbox" class="list-child" value=""  /> -->
-                                              <input type="checkbox" class="flat-grey list-child"/>
-                                              <!-- <input type="checkbox" class="square-grey"/> -->
-                                          </div>
-                                          <div class="task-title">
-                                              <span class="task-title-sp">Director is Modern Dashboard</span>
-                                              <span class="label label-success">2 Days</span>
-                                              <div class="pull-right hidden-phone">
-                                                  <button class="btn btn-default btn-xs"><i class="fa fa-check"></i></button>
-                                                  <button class="btn btn-default btn-xs"><i class="fa fa-pencil"></i></button>
-                                                  <button class="btn btn-default btn-xs"><i class="fa fa-times"></i></button>
-                                              </div>
-                                          </div>
-                                      </li>
-                                      <li>
-                                          <div class="task-checkbox">
-                                              <!-- <input type="checkbox" class="list-child" value=""  /> -->
-                                              <input type="checkbox" class="flat-grey"/>
-                                          </div>
-                                          <div class="task-title">
-                                              <span class="task-title-sp">Fully Responsive & Bootstrap 3.0.2 Compatible</span>
-                                              <span class="label label-danger">Done</span>
-                                              <div class="pull-right hidden-phone">
-                                                  <button class="btn btn-default btn-xs"><i class="fa fa-check"></i></button>
-                                                  <button class="btn btn-default btn-xs"><i class="fa fa-pencil"></i></button>
-                                                  <button class="btn btn-default btn-xs"><i class="fa fa-times"></i></button>
-                                              </div>
-                                          </div>
-                                      </li>
-                                      <li>
-                                          <div class="task-checkbox">
-                                              <!-- <input type="checkbox" class="list-child" value=""  /> -->
-                                              <input type="checkbox" class="flat-grey"/>
-                                          </div>
-                                          <div class="task-title">
-                                              <span class="task-title-sp">Latest Design Concept</span>
-                                              <span class="label label-warning">Company</span>
-                                              <div class="pull-right hidden-phone">
-                                                  <button class="btn btn-default btn-xs"><i class="fa fa-check"></i></button>
-                                                  <button class="btn btn-default btn-xs"><i class="fa fa-pencil"></i></button>
-                                                  <button class="btn btn-default btn-xs"><i class="fa fa-times"></i></button>
-                                              </div>
-                                          </div>
-                                      </li>
-                                      <li>
-                                          <div class="task-checkbox">
-                                              <!-- <input type="checkbox" class="list-child" value=""  /> -->
-                                              <input type="checkbox" class="flat-grey"/>
-                                          </div>
-                                          <div class="task-title">
-                                              <span class="task-title-sp">Write well documentation for this theme</span>
-                                              <span class="label label-primary">3 Days</span>
-                                              <div class="pull-right hidden-phone">
-                                                  <button class="btn btn-default btn-xs"><i class="fa fa-check"></i></button>
-                                                  <button class="btn btn-default btn-xs"><i class="fa fa-pencil"></i></button>
-                                                  <button class="btn btn-default btn-xs"><i class="fa fa-times"></i></button>
-                                              </div>
-                                          </div>
-                                      </li>
-                                      <li>
-                                          <div class="task-checkbox">
-                                              <!-- <input type="checkbox" class="list-child" value=""  /> -->
-                                              <input type="checkbox" class="flat-grey"/>
-                                          </div>
-                                          <div class="task-title">
-                                              <span class="task-title-sp">Don't bother to download this Dashbord</span>
-                                              <span class="label label-inverse">Now</span>
-                                              <div class="pull-right">
-                                                  <button class="btn btn-default btn-xs"><i class="fa fa-check"></i></button>
-                                                  <button class="btn btn-default btn-xs"><i class="fa fa-pencil"></i></button>
-                                                  <button class="btn btn-default btn-xs"><i class="fa fa-times"></i></button>
-                                              </div>
-                                          </div>
-                                      </li>
-                                      <li>
-                                          <div class="task-checkbox">
-                                              <!-- <input type="checkbox" class="list-child" value=""  /> -->
-                                              <input type="checkbox" class="flat-grey"/>
-                                          </div>
-                                          <div class="task-title">
-                                              <span class="task-title-sp">Give feedback for the template</span>
-                                              <span class="label label-success">2 Days</span>
-                                              <div class="pull-right hidden-phone">
-                                                  <button class="btn btn-default btn-xs"><i class="fa fa-check"></i></button>
-                                                  <button class="btn btn-default btn-xs"><i class="fa fa-pencil"></i></button>
-                                                  <button class="btn btn-default btn-xs"><i class="fa fa-times"></i></button>
-                                              </div>
-                                          </div>
-                                      </li>
-                                      <li>
-                                          <div class="task-checkbox">
-                                              <!-- <input type="checkbox" class="list-child" value=""  /> -->
-                                              <input type="checkbox" class="flat-grey"/>
-                                          </div>
-                                          <div class="task-title">
-                                              <span class="task-title-sp">Tell your friends about this admin template</span>
-                                              <span class="label label-danger">Now</span>
-                                              <div class="pull-right hidden-phone">
-                                                  <button class="btn btn-default btn-xs"><i class="fa fa-check"></i></button>
-                                                  <button class="btn btn-default btn-xs"><i class="fa fa-pencil"></i></button>
-                                                  <button class="btn btn-default btn-xs"><i class="fa fa-times"></i></button>
-                                              </div>
-                                          </div>
-                                      </li>
+                                        <ul class="task-list">
+                                            <li>
+                                                <div class="task-checkbox">
+                                                    <!-- <input type="checkbox" class="list-child" value=""  /> -->
+                                                    <input type="checkbox" class="flat-grey list-child"/>
+                                                    <!-- <input type="checkbox" class="square-grey"/> -->
+                                                </div>
+                                                <div class="task-title">
+                                                    <span class="task-title-sp">Director is Modern Dashboard</span>
+                                                    <span class="label label-success">2 Days</span>
+                                                    <div class="pull-right hidden-phone">
+                                                        <button class="btn btn-default btn-xs"><i class="fa fa-check"></i></button>
+                                                        <button class="btn btn-default btn-xs"><i class="fa fa-pencil"></i></button>
+                                                        <button class="btn btn-default btn-xs"><i class="fa fa-times"></i></button>
+                                                    </div>
+                                                </div>
+                                            </li>
+                                            <li>
+                                                <div class="task-checkbox">
+                                                    <!-- <input type="checkbox" class="list-child" value=""  /> -->
+                                                    <input type="checkbox" class="flat-grey"/>
+                                                </div>
+                                                <div class="task-title">
+                                                    <span class="task-title-sp">Fully Responsive & Bootstrap 3.0.2 Compatible</span>
+                                                    <span class="label label-danger">Done</span>
+                                                    <div class="pull-right hidden-phone">
+                                                        <button class="btn btn-default btn-xs"><i class="fa fa-check"></i></button>
+                                                        <button class="btn btn-default btn-xs"><i class="fa fa-pencil"></i></button>
+                                                        <button class="btn btn-default btn-xs"><i class="fa fa-times"></i></button>
+                                                    </div>
+                                                </div>
+                                            </li>
+                                            <li>
+                                                <div class="task-checkbox">
+                                                    <!-- <input type="checkbox" class="list-child" value=""  /> -->
+                                                    <input type="checkbox" class="flat-grey"/>
+                                                </div>
+                                                <div class="task-title">
+                                                    <span class="task-title-sp">Latest Design Concept</span>
+                                                    <span class="label label-warning">Company</span>
+                                                    <div class="pull-right hidden-phone">
+                                                        <button class="btn btn-default btn-xs"><i class="fa fa-check"></i></button>
+                                                        <button class="btn btn-default btn-xs"><i class="fa fa-pencil"></i></button>
+                                                        <button class="btn btn-default btn-xs"><i class="fa fa-times"></i></button>
+                                                    </div>
+                                                </div>
+                                            </li>
+                                            <li>
+                                                <div class="task-checkbox">
+                                                    <!-- <input type="checkbox" class="list-child" value=""  /> -->
+                                                    <input type="checkbox" class="flat-grey"/>
+                                                </div>
+                                                <div class="task-title">
+                                                    <span class="task-title-sp">Write well documentation for this theme</span>
+                                                    <span class="label label-primary">3 Days</span>
+                                                    <div class="pull-right hidden-phone">
+                                                        <button class="btn btn-default btn-xs"><i class="fa fa-check"></i></button>
+                                                        <button class="btn btn-default btn-xs"><i class="fa fa-pencil"></i></button>
+                                                        <button class="btn btn-default btn-xs"><i class="fa fa-times"></i></button>
+                                                    </div>
+                                                </div>
+                                            </li>
+                                            <li>
+                                                <div class="task-checkbox">
+                                                    <!-- <input type="checkbox" class="list-child" value=""  /> -->
+                                                    <input type="checkbox" class="flat-grey"/>
+                                                </div>
+                                                <div class="task-title">
+                                                    <span class="task-title-sp">Don't bother to download this Dashbord</span>
+                                                    <span class="label label-inverse">Now</span>
+                                                    <div class="pull-right">
+                                                        <button class="btn btn-default btn-xs"><i class="fa fa-check"></i></button>
+                                                        <button class="btn btn-default btn-xs"><i class="fa fa-pencil"></i></button>
+                                                        <button class="btn btn-default btn-xs"><i class="fa fa-times"></i></button>
+                                                    </div>
+                                                </div>
+                                            </li>
+                                            <li>
+                                                <div class="task-checkbox">
+                                                    <!-- <input type="checkbox" class="list-child" value=""  /> -->
+                                                    <input type="checkbox" class="flat-grey"/>
+                                                </div>
+                                                <div class="task-title">
+                                                    <span class="task-title-sp">Give feedback for the template</span>
+                                                    <span class="label label-success">2 Days</span>
+                                                    <div class="pull-right hidden-phone">
+                                                        <button class="btn btn-default btn-xs"><i class="fa fa-check"></i></button>
+                                                        <button class="btn btn-default btn-xs"><i class="fa fa-pencil"></i></button>
+                                                        <button class="btn btn-default btn-xs"><i class="fa fa-times"></i></button>
+                                                    </div>
+                                                </div>
+                                            </li>
+                                            <li>
+                                                <div class="task-checkbox">
+                                                    <!-- <input type="checkbox" class="list-child" value=""  /> -->
+                                                    <input type="checkbox" class="flat-grey"/>
+                                                </div>
+                                                <div class="task-title">
+                                                    <span class="task-title-sp">Tell your friends about this admin template</span>
+                                                    <span class="label label-danger">Now</span>
+                                                    <div class="pull-right hidden-phone">
+                                                        <button class="btn btn-default btn-xs"><i class="fa fa-check"></i></button>
+                                                        <button class="btn btn-default btn-xs"><i class="fa fa-pencil"></i></button>
+                                                        <button class="btn btn-default btn-xs"><i class="fa fa-times"></i></button>
+                                                    </div>
+                                                </div>
+                                            </li>
 
-                                  </ul>
-                              </div>
+                                        </ul>
+                                    </div>
 
-                              <div class=" add-task-row">
-                                  <a class="btn btn-success btn-sm pull-left" href="#">Add New Tasks</a>
-                                  <a class="btn btn-default btn-sm pull-right" href="#">See All Tasks</a>
-                              </div>
-                          </div>
-                      </section>
-                  </div>
-              </div>
-              <!-- row end -->
+                                    <div class=" add-task-row">
+                                        <a class="btn btn-success btn-sm pull-left" href="#">Add New Tasks</a>
+                                        <a class="btn btn-default btn-sm pull-right" href="#">See All Tasks</a>
+                                    </div>
+                                </div>
+                            </section>
+                        </div>
+                    </div>
+                    <!-- row end -->
                 </section><!-- /.content -->
                 <div class="footer-main">
                     Copyright &copy Director, 2014
@@ -796,13 +872,13 @@
         <script src="js/jquery.min.js" type="text/javascript"></script>
 
         <!-- jQuery UI 1.10.3 -->
-        <script src="${pageContext.request.contextPath}/js/jquery-ui-1.10.3.min.js" type="text/javascript"></script>
+        <script src="js/jquery-ui-1.10.3.min.js" type="text/javascript"></script>
         <!-- Bootstrap -->
-        <script src="${pageContext.request.contextPath}/js/bootstrap.min.js" type="text/javascript"></script>
+        <script src="js/bootstrap.min.js" type="text/javascript"></script>
         <!-- daterangepicker -->
-        <script src="${pageContext.request.contextPath}/js/plugins/daterangepicker/daterangepicker.js" type="text/javascript"></script>
+        <script src="js/plugins/daterangepicker/daterangepicker.js" type="text/javascript"></script>
 
-        <script src="${pageContext.request.contextPath}/js/plugins/chart.js" type="text/javascript"></script>
+        <script src="js/plugins/chart.js" type="text/javascript"></script>
 
         <!-- datepicker
         <script src="js/plugins/datepicker/bootstrap-datepicker.js" type="text/javascript"></script>-->
@@ -821,18 +897,18 @@
 
         <!-- Director for demo purposes -->
         <script type="text/javascript">
-            $('input').on('ifChecked', function(event) {
-                // var element = $(this).parent().find('input:checkbox:first');
-                // element.parent().parent().parent().addClass('highlight');
-                $(this).parents('li').addClass("task-done");
-                console.log('ok');
-            });
-            $('input').on('ifUnchecked', function(event) {
-                // var element = $(this).parent().find('input:checkbox:first');
-                // element.parent().parent().parent().removeClass('highlight');
-                $(this).parents('li').removeClass("task-done");
-                console.log('not');
-            });
+                            $('input').on('ifChecked', function (event) {
+                                // var element = $(this).parent().find('input:checkbox:first');
+                                // element.parent().parent().parent().addClass('highlight');
+                                $(this).parents('li').addClass("task-done");
+                                console.log('ok');
+                            });
+                            $('input').on('ifUnchecked', function (event) {
+                                // var element = $(this).parent().find('input:checkbox:first');
+                                // element.parent().parent().parent().removeClass('highlight');
+                                $(this).parents('li').removeClass("task-done");
+                                console.log('not');
+                            });
 
         </script>
         <script>
@@ -846,9 +922,9 @@
                 checkboxClass: 'icheckbox_flat-grey',
                 radioClass: 'iradio_flat-grey'
             });
-</script>
-<script type="text/javascript">
-    $(function() {
+        </script>
+        <script type="text/javascript">
+            $(function () {
                 "use strict";
                 //BAR CHART
                 var data = {
@@ -876,13 +952,13 @@
                         }
                     ]
                 };
-            new Chart(document.getElementById("linechart").getContext("2d")).Line(data,{
-                responsive : true,
-                maintainAspectRatio: false,
-            });
+                new Chart(document.getElementById("linechart").getContext("2d")).Line(data, {
+                    responsive: true,
+                    maintainAspectRatio: false,
+                });
 
             });
             // Chart.defaults.global.responsive = true;
-</script>
-</body>
+        </script>
+    </body>
 </html>

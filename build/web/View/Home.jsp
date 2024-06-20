@@ -99,6 +99,19 @@
 .add-to-cart:hover {
     background-color: #0056b3; /* Darker blue on hover */
 }
+     .cart-button {
+    display: inline-block;
+    padding: 10px 20px;
+    font-size: 16px;
+    cursor: pointer;
+    text-align: center;
+    text-decoration: none;
+    color: #fff;
+    background-color: #007bff;
+    border: none;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+}
     </style>
       <aside class="right-side">
             <!-- Content Header (Page header) -->
@@ -106,8 +119,9 @@
     <div>G1</div>
     <input type="text" placeholder="Search Product here...">
     <button>Search</button>
-    <button class="cart-button">Cart</button>
-    <a href="#" style="color: white; margin-left: 20px;">Register/Sign In</a>
+   <a href="ShoppingCart.jsp" class="cart-button">Cart</a>
+    <a href="Login.jsp" style="color: white; margin-left: 20px;">Sign In</a>
+    <a href="resgiter.jsp" style="color: white; margin-left: 20px;">Register</a>
     
 </header>
 <main>
