@@ -78,6 +78,27 @@
             background-color: #007BFF;
             color: white;
         }
+        .button-container {
+    display: flex; /* Aligns children (buttons) in a row */
+    justify-content: space-between; /* Spaces the buttons evenly */
+    width: 100%; /* Takes full width of the container */
+}
+
+.add-to-cart {
+    background-color: #007BFF; /* Blue background color */
+    color: white; /* White text */
+    border: none; /* No borders */
+    padding: 10px 20px; /* Padding around text */
+    margin: 5px; /* Space between buttons */
+    font-size: 16px; /* Text size */
+    cursor: pointer; /* Cursor changes to pointer when hovered */
+    border-radius: 5px; /* Rounded corners */
+    transition: background-color 0.3s; /* Smooth transition for background color */
+}
+
+.add-to-cart:hover {
+    background-color: #0056b3; /* Darker blue on hover */
+}
     </style>
       <aside class="right-side">
             <!-- Content Header (Page header) -->
