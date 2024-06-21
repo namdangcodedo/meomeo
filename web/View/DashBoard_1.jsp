@@ -300,22 +300,22 @@
                     <!-- sidebar menu: : style can be found in sidebar.less -->
                      <ul class="sidebar-menu">
                    <li>
-                        <a href="View/AccountManager.jsp">
+                        <a href="AccountManager.jsp">
                             <i class="fa fa-dashboard"></i> <span>Account Manager</span>
                         </a>
                     </li>
                     <li>
-                        <a href="View/AddAccount.jsp">
+                        <a href="AddAccount.jsp">
                             <i class="fa fa-dashboard"></i> <span>Add account</span>
                         </a>
                     </li>
                     <li>
-                        <a href="View/DashBoard_1.jsp">
+                        <a href="DashBoard_1.jsp">
                             <i class="fa fa-dashboard"></i> <span>Dash board</span>
                         </a>
                     </li>
                      <li>
-                        <a href="View/oderlist.jsp">
+                        <a href="oderlist.jsp">
                             <i class="fa fa-dashboard"></i> <span>Order</span>
                         </a>
                     </li>

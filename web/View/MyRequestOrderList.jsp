@@ -79,6 +79,19 @@
                 text-decoration: none;
                 font-weight: bold;
             }
+            .cart-button {
+    display: inline-block;
+    padding: 10px 20px;
+    font-size: 16px;
+    cursor: pointer;
+    text-align: center;
+    text-decoration: none;
+    color: #fff;
+    background-color: #007bff;
+    border: none;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+}
         </style>
     </head>
     <body>
@@ -112,8 +125,9 @@
                     <td>Pending</td>
                     <td>
                         <div class="button-container">
-                            <button class="button">View</button>
-                            <button class="button">Update</button>
+                           <a href="MyRequestOrderDetail.jsp" class="cart-button">View</a>
+                            <a href="MyOrderDetails.jsp" class="cart-button">Update</a>
+                            <a href="#" class="cart-button">Cancer</a>
                         </div>
                     </td>
                 </tr>
@@ -124,8 +138,9 @@
                     <td>Pending</td>
                     <td>
                         <div class="button-container">
-                            <button class="button">View</button>
-                            <button class="button">Update</button>
+                           <a href="MyRequestOrderDetail.jsp" class="cart-button">View</a>
+                              <a href="MyOrderDetails.jsp" class="cart-button">Update</a>
+                               <a href="#" class="cart-button">Cancer</a>
                         </div>
                     </td>
                 </tr>
@@ -135,8 +150,8 @@
                     <td>2024-06-10</td>
                     <td>Shipped</td>
                     <td>
-                        <div class="button-container">
-                            <button class="button">View</button>
+                        <div class="button-container"> 
+                             <a href="MyRequestOrderDetail.jsp" class="cart-button">View</a>
                           
                         </div>
                     </td>

@@ -119,7 +119,10 @@
     <div>G1</div>
     <input type="text" placeholder="Search Product here...">
     <button>Search</button>
-   <a href="ShoppingCart.jsp" class="cart-button">Cart</a>
+      <a href="View/ViewProfile.jsp" class="cart-button">My Profile</a>
+     <a href="View/MyRequestOrderList.jsp" class="cart-button">My Order</a>
+     <a href="View/ProductList.jsp" class="cart-button">Shop</a>
+   <a href="View/ShoppingCart.jsp" class="cart-button">Cart</a>
     <a href="login" style="color: white; margin-left: 20px;">Sign In</a>
     <a href="View/resgiter.jsp" style="color: white; margin-left: 20px;">Register</a>
     

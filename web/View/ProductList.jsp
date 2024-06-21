@@ -205,7 +205,7 @@ button:hover {
 
 </style>
 <body>
-    <a href="Home.jsp" class="cart-button" >Back</a>
+   z
     <div class="container">
         <aside class="sidebar">
             <div class="filter-section">
@@ -298,7 +298,8 @@ button:hover {
                 <div class="product-card">
                     <div class="product-image"></div>
                     <div class="product-info">
-                        <p>Tên sản phẩm</p>
+                        
+                        <p>   <a href="ProductDetails.jsp">Tên sản phẩm</a> </p>
                         <p>00.00đ</p>
                     </div>
                 </div>
@@ -306,56 +307,56 @@ button:hover {
                 <div class="product-card">
                     <div class="product-image"></div>
                     <div class="product-info">
-                        <p>Tên sản phẩm</p>
+                         <p>   <a href="ProductDetails.jsp">Tên sản phẩm</a> </p>
                         <p>00.00đ</p>
                     </div>
                 </div>
                 <div class="product-card">
                     <div class="product-image"></div>
                     <div class="product-info">
-                        <p>Tên sản phẩm</p>
+                          <p>   <a href="ProductDetails.jsp">Tên sản phẩm</a> </p>
                         <p>00.00đ</p>
                     </div>
                 </div>
                 <div class="product-card">
                     <div class="product-image"></div>
                     <div class="product-info">
-                        <p>Tên sản phẩm</p>
+                          <p>   <a href="ProductDetails.jsp">Tên sản phẩm</a> </p>
                         <p>00.00đ</p>
                     </div>
                 </div>
                 <div class="product-card">
                     <div class="product-image"></div>
                     <div class="product-info">
-                        <p>Tên sản phẩm</p>
+                            <p>   <a href="ProductDetails.jsp">Tên sản phẩm</a> </p>
                         <p>00.00đ</p>
                     </div>
                 </div>
                 <div class="product-card">
                     <div class="product-image"></div>
                     <div class="product-info">
-                        <p>Tên sản phẩm</p>
+                         <p>   <a href="ProductDetails.jsp">Tên sản phẩm</a> </p>
                         <p>00.00đ</p>
                     </div>
                 </div>
                 <div class="product-card">
                     <div class="product-image"></div>
                     <div class="product-info">
-                        <p>Tên sản phẩm</p>
+                        <p>   <a href="ProductDetails.jsp">Tên sản phẩm</a> </p>
                         <p>00.00đ</p>
                     </div>
                 </div>
                 <div class="product-card">
                     <div class="product-image"></div>
                     <div class="product-info">
-                        <p>Tên sản phẩm</p>
+                         <p>   <a href="ProductDetails.jsp">Tên sản phẩm</a> </p>
                         <p>00.00đ</p>
                     </div>
                 </div>
                 <div class="product-card">
                     <div class="product-image"></div>
                     <div class="product-info">
-                        <p>Tên sản phẩm</p>
+                          <p>   <a href="ProductDetails.jsp">Tên sản phẩm</a> </p>
                         <p>00.00đ</p>
                     </div>
                 </div>
