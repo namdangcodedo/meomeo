@@ -167,7 +167,7 @@
         </div>
         <div class="buttons">
             <button type="button" class="cancel">Cancel</button>
-            <button type="button">Make Orders</button>
+           <a href="pay.jsp" class="cart-button">Make Order</a>
         </div>
     </div>
 </body>

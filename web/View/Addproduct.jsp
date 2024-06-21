@@ -24,72 +24,46 @@
     <!-- Theme style -->
     <link href="${pageContext.request.contextPath}/css/style.css" rel="stylesheet" type="text/css" />
 
-       <style>
-        body {
-            font-family: Arial, sans-serif;
-            padding: 20px;
-            background: #f4f4f4;
-        }
-        .container {
-            background: white;
-            padding: 20px;
-            border-radius: 8px;
-            box-shadow: 0 0 10px rgba(0,0,0,0.1);
-            max-width: 1200px;
-            margin: auto;
-        }
-        .form-group {
-            margin-bottom: 20px;
-        }
-        label {
-            display: block;
-            margin-bottom: 5px;
-            font-weight: bold;
-        }
-        input[type="text"], input[type="email"] {
-            width: calc(50% - 10px);
-            padding: 10px;
-            margin-right: 20px;
-            display: inline-block;
-            border: 1px solid #ccc;
-            border-radius: 4px;
-        }
-        .form-half {
-            float: left;
-            width: 50%;
-        }
-        .form-half.right {
-            padding-left: 20px;
-        }
-        select, .avatar img {
-            display: block;
-            width: 100%;
-            margin-top: 5px;
-            border: 1px solid #ccc;
-        }
-        .avatar img {
-            height: auto;
-            max-height: 150px;
-        }
-        .buttons {
-            clear: both;
-            padding-top: 20px;
-            text-align: right;
-        }
-        button {
-            padding: 10px 20px;
-            margin-left: 10px;
-            font-size: 16px;
-            color: white;
-            background-color: #007bff;
-            border: none;
-            border-radius: 5px;
-            cursor: pointer;
-        }
-        button.back {
-            background-color: #6c757d;
-        }
-    </style>
+         <style>
+    body {
+        font-family: Arial, sans-serif;
+    }
+    .container {
+        width: 40%;
+        margin: 50px auto;
+        padding: 20px;
+        border: 1px solid #ccc;
+        border-radius: 5px;
+    }
+    input[type=text], input[type=date], input[type=number], select {
+        width: 100%;
+        padding: 8px;
+        margin: 10px 0;
+        display: inline-block;
+        border: 1px solid #ccc;
+        border-radius: 4px;
+        box-sizing: border-box;
+    }
+    input[type=radio] {
+        margin: 10px;
+    }
+    label {
+        font-weight: bold;
+    }
+    .button {
+        width: 100%;
+        background-color: #4CAF50;
+        color: white;
+        padding: 14px 20px;
+        margin: 8px 0;
+        border: none;
+        border-radius: 4px;
+        cursor: pointer;
+    }
+    .button:hover {
+        background-color: #45a049;
+    }
+</style>
 
     <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
     <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
@@ -337,7 +311,7 @@
                 </form>
                 <!-- /.search form -->
                 <!-- sidebar menu: : style can be found in sidebar.less -->
-                 <ul class="sidebar-menu">
+               <ul class="sidebar-menu">
                    <li>
                         <a href="AccountManager.jsp">
                             <i class="fa fa-dashboard"></i> <span>Account Manager</span>
@@ -358,11 +332,6 @@
                             <i class="fa fa-dashboard"></i> <span>Order</span>
                         </a>
                     </li>
-                     <li>
-                        <a href="Addproduct.jsp">
-                            <i class="fa fa-dashboard"></i> <span>add product</span>
-                        </a>
-                    </li>
                     
                     
                                            
@@ -378,34 +347,40 @@
 
 
             <!-- Main content -->
-           <div class="container">
-        <h2>Account Details</h2>
-        <div class="form-group form-half">
-            <label for="fullname">Your Fullname*:</label>
-            <input type="text" id="fullname" value="Cao Quynh Nga" name="fullname">
-            <label for="phonenumber">Your Phonenumber*:</label>
-            <input type="text" id="phonenumber" value="099887766" name="phonenumber">
-            <label for="email">Your Email*:</label>
-            <input type="email" id="email" value="Ngakiuu@gmail.com" name="email">
-            <label for="address">Your Address*:</label>
-            <input type="text" id="address" value="Nghệ An" name="address">
-             <label for="address">Role*:</label>
-             <input type="text" id="address" value="staff" name="address">
-          <label for="gender">Gender:</label>
-            <select id="gender" name="gender">
-                <option>Male</option>
-                <option>Female</option>
-                <option>Other</option>
-            </select>
-            <label>Avatar:</label>
-            <img src="https://th.bing.com/th/id/R.3d7df057f2feabddae1ef2e2af47f5a3?rik=ojTvFFK0Udogag&pid=ImgRaw&r=0" alt="Avatar">
-        </div>
-       
-        <div class="buttons">
-            <button type="button" class="back">Back</button>
-            
-        </div>
-    </div>
+      <div class="container">
+    <h2>Create new Product</h2>
+    <form action="/submitProduct" method="post">
+        <label for="pname">Product Name:</label>
+        <input type="text" id="pname" name="productName" required>
+
+        <label for="desc">Description:</label>
+        <input type="text" id="desc" name="description" required>
+
+        <label for="price">Price:</label>
+        <input type="number" id="price" name="price" required>
+
+        <label for="quantity">Quantity:</label>
+        <input type="number" id="quantity" name="quantity" required>
+
+        <label for="image">Image:</label>
+        <input type="file" id="image" name="image">
+
+        <label for="category">Category:</label>
+        <input type="text" id="category" name="category" required>
+
+        <label for="cdate">Created Date:</label>
+        <input type="date" id="cdate" name="createdDate" required>
+
+        <label>Status:</label>
+        <input type="radio" id="instock" name="status" value="In stock" checked>
+        <label for="instock">In stock</label>
+        <input type="radio" id="outofstock" name="status" value="Out of stock">
+        <label for="outofstock">Out of stock</label>
+
+        <input type="submit" value="Create" class="button">
+        <input type="button" value="Cancel" class="button" onclick="window.history.back();">
+    </form>
+</div>
         </aside><!-- /.right-side -->
 
     </div><!-- ./wrapper -->

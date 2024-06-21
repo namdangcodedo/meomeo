@@ -127,7 +127,7 @@
                         <div class="button-container">
                            <a href="MyRequestOrderDetail.jsp" class="cart-button">View</a>
                             <a href="MyOrderDetails.jsp" class="cart-button">Update</a>
-                            <a href="#" class="cart-button">Cancer</a>
+                            <a href="#" class="cart-button">Cance</a>
                         </div>
                     </td>
                 </tr>
@@ -140,7 +140,7 @@
                         <div class="button-container">
                            <a href="MyRequestOrderDetail.jsp" class="cart-button">View</a>
                               <a href="MyOrderDetails.jsp" class="cart-button">Update</a>
-                               <a href="#" class="cart-button">Cancer</a>
+                               <a href="#" class="cart-button">Cance</a>
                         </div>
                     </td>
                 </tr>

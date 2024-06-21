@@ -319,6 +319,11 @@
                             <i class="fa fa-dashboard"></i> <span>Order</span>
                         </a>
                     </li>
+                     <li>
+                        <a href="View/Addproduct.jsp">
+                            <i class="fa fa-dashboard"></i> <span>add product</span>
+                        </a>
+                    </li>
                     
                     
                                            

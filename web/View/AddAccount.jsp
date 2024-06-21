@@ -345,7 +345,7 @@
                 </form>
                 <!-- /.search form -->
                 <!-- sidebar menu: : style can be found in sidebar.less -->
-               <ul class="sidebar-menu">
+             <ul class="sidebar-menu">
                    <li>
                         <a href="AccountManager.jsp">
                             <i class="fa fa-dashboard"></i> <span>Account Manager</span>
@@ -364,6 +364,11 @@
                      <li>
                         <a href="oderlist.jsp">
                             <i class="fa fa-dashboard"></i> <span>Order</span>
+                        </a>
+                    </li>
+                     <li>
+                        <a href="Addproduct.jsp">
+                            <i class="fa fa-dashboard"></i> <span>add product</span>
                         </a>
                     </li>
                     
